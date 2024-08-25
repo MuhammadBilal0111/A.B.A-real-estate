@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/HouseDetailsCardsTemplate.css">
+    <script src="./../js/template.js" defer></script>
+    <title>Cards</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header-content">
+            <i class='fa-solid fa-house'></i>
+            <a class="logo">ABA Real Estates</a>
+        </div>
+        <label class="icons" for="check">
+            <i class='fa-solid fa-bars' id="menu-icon"></i>
+            <i class='fa-solid fa-xmark' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/properties/post">Post Property</a></li>
+                <li><a href="/Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        <%- results.join(' ') %>
+    </main>
+
+    <!-- footer -->
+    <footer class="foooter">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Our services</a></li>
+                        <li><a href="">Help & Support</a></li>
+                        <li><a href="">Terms Of Use</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <ul>
+                        <li><a href="">Add Property</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="">Projects in Karachi</a></li>
+                        <li><a href="">Projects in Lahore</a></li>
+                        <li><a href="">Projects in Islamabad</a></li>
+                        <li><a href="">Projects in Peshawar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href=""><img src="./../icons/facebook.png" alt=""></i></a>
+                        <a href=""><img src="./../icons/instagram.png" alt=""></a>
+                        <a href=""><img src="./../icons/twitter.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>© Copyright 2024 ABA Real Estates. All Rights Reserved</p>
+    </footer>
+    
+    <!-- Javascript section -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+</html>

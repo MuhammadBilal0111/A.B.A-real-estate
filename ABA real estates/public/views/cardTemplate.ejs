@@ -1,0 +1,32 @@
+<div class="searchCard">
+    <div class="img">
+        <img src="https://media.zameen.com/thumbnails/225048243-800x600.webp" alt="">
+    </div>
+    <div class="text">
+        <div class="title">
+            <h4><a href="/properties/<%= result.property_id %>"><%= result.description %></a></h4>
+        </div>
+        <div class="location">
+            <p><%= result.description %></p>
+        </div>
+        <div class="bedBathArea">
+            <div class="bedrooms">
+                <img src="./../icons/bedroomicon.svg" alt="">
+            </div>
+            <p><%= result.bedrooms %></p>
+            <div class="bathrooms">
+                <img src="./../icons/bathroomicon.svg" alt="">
+            </div>
+            <p><%= result.bathrooms %></p>
+            <div class="area">
+                <img src="./../icons/areaicon.svg" alt="">
+            </div>
+            <p><%= result.area %> marla</p>
+        </div>
+        <div class="rentSale"><%= result.purpose %></div>
+    </div>
+    <div class="price">
+        <%= result.price %>
+    </div>
+</div>
+

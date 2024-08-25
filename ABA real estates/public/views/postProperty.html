@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/postProperty.css">
+    <title>ABA real estates</title>
+</head>
+<body>
+     <!-- header -->
+     <header class="header">
+        <div class="header-content">
+            <i class='fa-solid fa-house'></i>
+            <a class="logo">ABA Real Estates</a>
+        </div>
+        <label class="icons" for="check">
+            <i class='fa-solid fa-bars' id="menu-icon"></i>
+            <i class='fa-solid fa-xmark' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/properties/post">Post Property</a></li>
+                <li><a href="/Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="propertyDetails">
+            <h1>Property Details</h1>
+            <form action="/properties/propertyPosted" method="post" enctype="multipart/form-data" id="propertyForm">
+                <div class="en">
+                    <div class="entry" id="entry2">
+                        <input type="text" name="price" required>
+                        <div class="data">Enter Property Price (in Whole Number)</div>
+                    </div>
+                    <div class="entry" id="entry3">
+                        <input type="text" name="area" required>
+                        <div class="data">Enter Property Size (in Sq.Yd.)</div>
+                    </div>
+                </div>
+                 <div class="en">
+                    <div class="entry" id="entry4">
+                        <input type="text" name="property_type" required>
+                        <div class="data">Enter Property Type (House/Flat)</div>
+                    </div>
+                    <div class="entry" id="entry5">
+                        <input type="text" name="purpose" required>
+                        <div class="data">Enter Purpose (For Sale/For Rent)</div>
+                    </div>
+                </div>
+                <div class="en">
+                    <div class="entry" id="entry6">
+                        <input type="text" name="bedrooms" required>
+                        <div class="data">How Many Bedrooms?</div>
+                    </div>
+                    <div class="entry" id="entry7">
+                        <input type="text" name="bathrooms" required>
+                        <div class="data">How Many Bathrooms?</div>
+                    </div>
+                </div>
+                <div class="en">
+                    <div class="entry" id="entry8">
+                        <input type="text" name="location" required>
+                        <div class="data">Enter Property Address</div>
+                    </div>
+                    <div class="entry" id="entry9">
+                        <input type="text" name="city" required>
+                        <div class="data">Enter Property City</div>
+                    </div>
+                </div>
+                <div class="en">
+                    <div class="entry" id="entry10">
+                        <input type="text" name="latitude" required>
+                        <div class="data">Enter Property latitude</div>
+                    </div>
+                    <div class="entry" id="entry11">
+                        <input type="text" name="longitude" required>
+                        <div class="data">Enter Property longitude</div>
+                    </div>
+                </div>
+                <div class="textarea">
+                    <textarea name="description" id="inquire" placeholder="Enter Property Description" rows="4"></textarea>
+                </div>
+                <div class="en">
+                    <div class="entry" id="entry12">
+                        <div class="pic_and_label">
+                            <label for="img1" >Select Image 1</label><br>
+                            <input type="file" name="img1">
+                        </div>
+                    </div>
+                    <div class="entry" id="entry13">
+                        <div class="pic_and_label">
+                            <label for="img2" >Select Image 2</label><br>
+                            <input type="file" name = "img2" >
+                        </div>
+                    </div>
+                    <div class="entry" id="entry14">
+                        <div class="pic_and_label">
+                            <label for="img3" >Select Image 3</label><br>
+                            <input type="file" name="img3" >
+                        </div>
+                    </div>
+                </div>
+                <div class="form_button">
+                    <button class="form_btn" type="submit"> Post Property</button>
+                </div>
+            </form>
+        </div>
+        <!-- modal -->
+        <div class="popup" id="successModal" style="display: none;">
+            <img src="./../icons/tick.png">
+            <h2>Thank You!</h2>
+            <p id="propertyIdText">Your property posted succesfully, you can refer your property by id </p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+        <div class="popup" id="deniedModal" >
+            <img src="./../icons/cross.webp">
+            <h2>Warning!</h2>
+            <p></p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="container1">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Our services</a></li>
+                        <li><a href="">Help & Support</a></li>
+                        <li><a href="">Terms Of Use</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <ul>
+                        <li><a href="">Add Property</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="">Projects in Karachi</a></li>
+                        <li><a href="">Projects in Lahore</a></li>
+                        <li><a href="">Projects in Islamabad</a></li>
+                        <li><a href="">Projects in Peshawar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href=""><img src="../icons/facebook.png" alt=""></i></a>
+                        <a href=""><img src="../icons/instagram.png" alt=""></a>
+                        <a href=""><img src="../icons/twitter.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>© Copyright 2024 ABA Real Estates. All Rights Reserved</p>
+    </footer>
+    <script>
+document.getElementById('propertyForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = new FormData(this);
+
+    fetch('/properties/propertyPosted', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // console.log(data.data.success);
+        if(data.data.success){
+            openPopup(data.data.id);
+        }
+    })
+});
+let popup = document.getElementById('successModal');
+let propertyIdText = document.getElementById('propertyIdText');
+// popup.classList.add('open-popup');
+function openPopup(id) {
+    popup.style.display = 'block';
+    popup.classList.add('open-popup');
+    document.querySelector('#propertyForm').style.filter = 'blur(10px)';
+    propertyIdText.textContent = `Your property posted successfully, you can refer your property by id${id}`;
+}
+function closePopup() {
+    popup.classList.remove('open-popup');
+    popup.style.display = 'none';
+    document.querySelector('#propertyForm').style.filter = 'blur(0px)';
+}
+
+
+    </script>
+</body>
+</html>

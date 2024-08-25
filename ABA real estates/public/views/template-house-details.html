@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../js/template-house-details.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ABA Real Estates</title>
+    <link rel="stylesheet" href="./../css/template-house-details.css">
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header-content">
+            <i class='fa-solid fa-house'></i>
+            <a class="logo">ABA Real Estates</a>
+        </div>
+        <label class="icons" for="check">
+            <i class='fa-solid fa-bars' id="menu-icon"></i>
+            <i class='fa-solid fa-xmark' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/properties/post">Post Property</a></li>
+                <li><a href="/Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="head_and_price">
+            <div class="head_and_price_inner">
+                <h1 class="head_and_price_inner-1">Avail Yourself {{%location%}}</h1>
+                <h1 class="head_and_price_inner-2" >PKR {{%price%}}</h2>
+            </div>
+            <div class="address"><h4>{{%location%}}</h4></div>
+            <div class="but_div">
+                <button class="btn">FEATURED</button>
+                <button class="btn">FOR SALE</button>
+            </div>
+        </div>
+        <div class="pics_and_form">
+            <div class="container">
+    
+            <div class="slide">
+                <div class="item" style="background-image: url('./../ad1/ad1-1.jpg');">
+                    <div class="content">
+                        <div class="name">{{%bedroom%}}<i class="fa-solid fa-bed"></i></div>                    
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('./../ad1/ad1-2.jpg');">
+                    <div class="content">
+                        <div class="name">{{%bathroom%}} <i class="fa-solid fa-bath"></i></div>
+                        
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('./../ad1/ad1-3.jpg');">
+                    <div class="content">
+                        <div class="name">{{%size%}}<i class="fa-solid fa-house"></i></div>
+                        
+                    </div>
+                </div>
+         
+            </div>
+            <div class="buttons">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            </div>
+            <form class="side_form" action="send-Email" method="post">
+                <div class="entry1">
+                    <input type="text" name="Name" required>
+                    <div class="data">Enter Name</div>
+                </div>
+                <div class="entry1">
+                    <input type="email" name="Email" required>
+                    <div class="data" >Enter Email</div>
+                </div>
+                <div class="entry1">
+                    <input type="tel" name="Phone" required>
+                    <div class="data">Enter Phone No.</div>
+                </div>
+                <div class="textarea">
+                    <textarea name="inquire" id="inquire" >I would like to inquire about your property Zameen - ID49311489. Please contact me at your earliest convenience.</textarea>
+                </div>
+                <div class="form_button">
+                    <button class="form_btn" value="send-Email"><i class="fa-solid fa-envelope"></i> Send Email</button>
+                </div>
+            </form>
+        </div>
+        <div class="page2">
+            <div class="details">
+                <table>
+                    <tr>
+                        <td><h2>Overview</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Details</h3></td>
+                    </tr>
+                    <tr class="clr_row">
+                        <td>Type</td>
+                        <td>{{%type%}}</td>
+                        <td>Area</td>
+                        <td>{{%size%}}</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>{{%price%}}</td>
+                        <td>Purpose</td>
+                        <td>{{%purpose%}}</td>
+                    </tr>
+                    <tr class="clr_row">
+                        <td>Location</td>
+                        <td>{{%location%}}</td>
+                        <td>Bedroom(s)</td>
+                        <td>{{%bedroom%}}</td>
+                    </tr>
+                    <tr>
+                        <td>Bathroom(s)</td>
+                        <td>{{%bathroom%}}</td>
+                        <td>Property ID</td>
+                        <td>{{%propertyID%}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="description">
+                <h2>Description</h2>
+                <p>{{%location%}}</p>
+            </div>
+            <div class="map">
+                <h2 class="loc">Location</h2>
+                <h2 class="add_map">{{%location%}}</h2>
+                <div class="google_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14464.025851684753!2d67.0583741!3d24.999896349999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb341425c6c149d%3A0xb7c974979e256867!2sAl%20Anum%20unani%20Dawakhana!5e0!3m2!1sen!2s!4v1711188360428!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a href="https://maps.app.goo.gl/3yYLiSkaakNFQeJF8">
+                        <div class="above_map">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3>Tap to View Society Map</h3>
+                            <h5>Find Out the Location of the Property on an interactive Society Map</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- footer -->
+        <footer>
+            <div class="container1">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Our services</a></li>
+                            <li><a href="">Help & Support</a></li>
+                            <li><a href="">Terms Of Use</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact us</h4>
+                        <ul>
+                            <li><a href="">Add Property</a></li>
+                            <li><a href="">News</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick links</h4>
+                        <ul>
+                            <li><a href="">Projects in Karachi</a></li>
+                            <li><a href="">Projects in Lahore</a></li>
+                            <li><a href="">Projects in Islamabad</a></li>
+                            <li><a href="">Projects in Peshawar</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href=""><img src="./../icons/facebook.png" alt=""></i></a>
+                            <a href=""><img src="./../icons/instagram.png" alt=""></a>
+                            <a href=""><img src="./../icons/twitter.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>© Copyright 2024 ABA Real Estates. All Rights Reserved</p>
+        </footer>
+    </main>
+</body>
+</html>

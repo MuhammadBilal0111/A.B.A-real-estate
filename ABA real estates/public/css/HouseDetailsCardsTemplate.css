@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.3rem 10%;
+    background-color: #18191a;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 5px #fff;
+    z-index: 100;
+
+}
+.header-content{
+    cursor: pointer;
+}
+.header-content i{
+    margin: 0 0.5rem;
+    color: #5995fd;
+    font-size: 1.3rem;
+}
+.nav-list{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+.logo{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+}
+.nav-list li a{
+    transition: 0.4s ease-in-out;
+}
+.nav-list li a:hover{
+    color:  #5995fd;
+}
+.nav-list a{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 500;
+}
+.icons{
+    position: absolute;
+    font-size: 1.7rem;
+    color: #fff;
+    display: none;
+    right: 5%;
+    padding: 1.3rem 5%;
+    cursor: pointer;
+}
+#close-icon{
+    display: none;
+}
+/* main */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+.searchCard{
+    height: max-content;
+    display: flex;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.425);
+    width: 80%;
+    border-radius: 2.2rem;
+    margin: 2.2rem 0;
+    padding: 1.2rem  1.5rem;
+    align-items: center;
+}
+/* .searchCard:hover{
+    cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.664);
+} */
+
+.img{
+    height: 200px;
+    width: 200px;
+}
+.img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    object-fit: cover;
+}
+.img img:hover{
+    cursor: pointer;
+}
+/* .searchCard > .img > img{
+    /* max-width: 100%; */
+    /* object-fit: cover;
+} */ 
+.searchCard > .text{
+    width:60%;
+    margin: auto;
+    padding: 20px;   
+}
+.searchCard > .price{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;   
+}
+.searchCard > .text > .title{
+    /* font-size: 1.4em;
+    font-weight: 500;
+    height: 70px;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis; */
+
+    font-size: 1.4em;
+    font-weight: 500;
+    height: 2.9em; 
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+.title a{
+    text-decoration: none;
+    color: #000;
+}
+.title a:hover{
+    text-decoration: underline;
+}
+.searchCard > .text > .location p{
+    font-size: 16px;
+    padding-top: 8px;
+    font-weight: 500;
+}
+.searchCard > .text > .bedBathArea{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-top: 10px;
+    display: flex;
+    font-weight: 500;
+    width: 40%;
+}
+.searchCard > .text > .rentSale{
+    font-size: 16px;
+    padding-top: 10px;
+    font-weight: 560;
+}
+.searchCard > .text > .bedBathArea img{
+    height: 30px;
+}
+.searchCard > .text > .bedBathArea p{
+    margin: 5px;
+}
+
+/* footer */
+footer{
+    background-color: #18191a;
+}
+.container{
+    position: relative;
+    top: 200%;
+    max-width: 1170px;
+    margin: auto;
+    padding: 70px 30px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 700;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #5995fd;
+    box-sizing: border-box;
+    height: 2px;
+    width: 60px;
+}
+.footer-col li:not(:last-child){
+    margin-bottom: 7px;
+}
+.footer-col li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color : #bbbbbb;
+    font-weight: 300;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+.footer-col li a:hover{
+    color: #5995fd;
+    text-decoration: underline;
+    padding-left: 7px;
+}
+footer p{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0 0 5px #fff;
+    padding: 0 30px;
+}
+.social-links a{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 20px 10px 0;
+}
+.social-links img{
+    height: 100%;
+    width:100%;
+}
+/* header responsiveness */
+@media screen and (max-width:992px) {
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+/* header responsiveness */
+@media screen and (max-width: 768px) {
+    .icons{
+        display: inline-flex;
+    }
+    .navbar{
+        position: absolute;
+        top: -1200px;
+        left: 0;
+        width: 100%;
+        height: 17.7rem;
+        background-color: #18191a;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0,0,1);
+        transition: 0.3s ease;
+        z-index: -3;
+    }
+    .navbar ul{
+        flex-direction: column;
+        align-items: center;
+        margin: 1.2rem 0;
+    }
+    .navbar li{
+        transition: 0.3 linear;
+    }
+    /* footer */
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+/* footer */
+@media screen and (max-width:574px) {
+    .footer-col{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 693px) {
+    .searchCard{
+        flex-direction: column;
+    }
+    .searchCard > .text > .title {
+        font-size: 1.2em; 
+    }
+    .searchCard > .text > .location {
+        font-size: 12px; 
+    }
+    .searchCard > .text > .bedBathArea,
+    .searchCard > .text > .rentSale {
+        font-size: 12px; 
+    }
+    .searchCard > .price{
+        width: 100%;
+        justify-content: center;
+    }
+    .searchCard > .text{
+        width: 100%;
+        margin: 0;
+    }
+    .img{
+        width: 90%;
+        height: 250px;
+        min-height: 150%;
+    }
+    .searchCard{
+        padding: 1.8rem  3%;
+    }
+}
+@media screen and (max-width : 254px) {
+    .searchCard > .text > .bedBathArea{
+        flex-wrap: wrap;
+    }
+    .img{
+        height: 150px;
+        min-height: 100%;
+    }
+}
